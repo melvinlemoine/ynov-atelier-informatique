@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.body {
+  font-family: Poppins, sans-serif;
+  background-color: #F60B0F;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+.body .content {
+  margin-top: 10rem;
+  margin-left: 10rem;
+  width: fit-content;
+}
+
+.body .content__quote {
+  color: #FCC405;
+  font-size: 3rem;
+}
+
+.body .content__title {
+  font-size: 5rem;
+  color: white;
+}
+
+.body .konbini {
+  top: 2.5rem;
+  right: 2.5rem;
+  width: 7.5rem;
+}
+
+.body .spock {
+  bottom: 0;
+  left: 0;
+}
+
+.body .spock__img {
+  height: 25rem;
+}
+
+.body .spock__name {
+  left: 125%;
+  background-color: #002FAF;
+  color: white;
+  border-radius: .25rem;
+  transform: rotate(-11.25deg);
+  bottom: 75%;
+}
+
+.body .sneakers {
+  right: -10rem;
+  bottom: -1rem;
+  transform: scale(-1, 1) !important;
+  height: 50%;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,45 @@
+.body
+    font-family: Poppins, sans-serif
+    background-color: $red
+    height: 100vh
+    overflow: hidden
+
+    &::-webkit-scrollbar
+        display: none
+
+    .content
+        margin-top: 10rem
+        margin-left: 10rem
+        width: fit-content
+        &__quote
+            color: $yellow
+            font-size: 3rem
+        &__title
+            font-size: 5rem
+            color: white
+
+    .konbini
+        top: 2.5rem
+        right: 2.5rem
+        width: 7.5rem
+
+    .spock
+        bottom: 0
+        left: 0
+
+        &__img
+            height: 25rem
+
+        &__name
+            left: 125%
+            background-color: $blue
+            color: white
+            border-radius: .25rem
+            transform: rotate(-11.25deg)
+            bottom: 75%
+
+    .sneakers
+        right: -10rem
+        bottom: -1rem
+        transform: scale(-1, 1) !important
+        height: 50%
