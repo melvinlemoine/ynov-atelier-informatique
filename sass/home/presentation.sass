@@ -1,0 +1,53 @@
+.presentation
+    &__content
+        &_left
+            &_description
+                color: #707070
+                span
+                    position: relative
+                    font-weight: bold
+
+                    &.yellow::after
+                        background-color: $yellow
+                    &.blue::after
+                        background-color: $blue
+                    &.red::after
+                        background-color: $red
+                    &::after
+                        content: ''
+                        position: absolute
+                        height: 50%
+                        width: 100%
+                        bottom: 0
+                        left: 0
+                        opacity: .25
+                        z-index: -1
+
+        &_right
+            position: relative
+            // border: 1px solid red
+            overflow: hidden
+            border-radius: $br-normal
+            // max-height: 25rem
+
+            .play,
+            .pause
+                position: absolute
+                font-size: 4rem
+
+                cursor: pointer
+                z-index: 10
+
+                text-shadow: 0 0 1rem rgba(0,0,0,.25)
+
+            .play
+                left: 50%
+                top: 50%
+                transform: translateX(-50%) translateY(-50%)
+            .pause
+                bottom: 4.5rem
+                left: 2rem
+
+            &_vid
+                // object-fit: cover
+                // border: 1px solid blue

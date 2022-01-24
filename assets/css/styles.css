@@ -13,62 +13,196 @@
   padding-right: 25px;
 }
 
+.section {
+  margin-top: 5rem;
+}
+
+.section__title {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  background-color: #002FAF;
+  color: white;
+  padding: .25rem 1.5rem;
+  font-size: 3rem;
+  width: fit-content;
+}
+
 .body {
   font-family: Poppins, sans-serif;
-  background-color: #F60B0F;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
+  padding-bottom: 3rem;
 }
 
 .body::-webkit-scrollbar {
   display: none;
 }
 
-.body .content {
+.body .header {
+  background-color: #F60B0F;
+  min-height: 70vh;
+  height: 75vh;
+  overflow: hidden;
+}
+
+.body .header__content {
   margin-top: 10rem;
   margin-left: 10rem;
   width: fit-content;
 }
 
-.body .content__quote {
-  color: #FCC405;
-  font-size: 3rem;
-}
-
-.body .content__title {
+.body .header__content_title {
   font-size: 5rem;
   color: white;
 }
 
-.body .konbini {
+.body .header__logo {
   top: 2.5rem;
   right: 2.5rem;
   width: 7.5rem;
 }
 
-.body .spock {
+.body .header__spock {
   bottom: 0;
   left: 0;
+  height: 50%;
 }
 
-.body .spock__img {
-  height: 25rem;
+.body .header__spock_img {
+  height: 100%;
 }
 
-.body .spock__name {
+.body .header__spock_name {
   left: 125%;
   background-color: #002FAF;
   color: white;
   border-radius: .25rem;
   transform: rotate(-11.25deg);
-  bottom: 75%;
+  bottom: 50%;
 }
 
-.body .sneakers {
-  right: -10rem;
-  bottom: -1rem;
-  transform: scale(-1, 1) !important;
+.body .header__sneaker {
+  right: 2.5rem;
+  bottom: 2.5rem;
+  transform: scale(-1, 1) rotate(11.25deg);
+  height: 40%;
+}
+
+.body .presentation__content_left_description {
+  color: #707070;
+}
+
+.body .presentation__content_left_description span {
+  position: relative;
+  font-weight: bold;
+}
+
+.body .presentation__content_left_description span.yellow::after {
+  background-color: #FCC405;
+}
+
+.body .presentation__content_left_description span.blue::after {
+  background-color: #002FAF;
+}
+
+.body .presentation__content_left_description span.red::after {
+  background-color: #F60B0F;
+}
+
+.body .presentation__content_left_description span::after {
+  content: '';
+  position: absolute;
   height: 50%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: .25;
+  z-index: -1;
+}
+
+.body .presentation__content_right {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+.body .presentation__content_right .play,
+.body .presentation__content_right .pause {
+  position: absolute;
+  font-size: 4rem;
+  cursor: pointer;
+  z-index: 10;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+}
+
+.body .presentation__content_right .play {
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.body .presentation__content_right .pause {
+  bottom: 4.5rem;
+  left: 2rem;
+}
+
+.body .interviews .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 15rem;
+  column-gap: 1rem;
+}
+
+.body .interviews .grid .interview {
+  overflow: hidden;
+  border-radius: 0.25rem;
+  transition: transform .1s ease-in-out;
+  cursor: pointer;
+}
+
+.body .interviews .grid .interview:hover {
+  transform: scale(1.025);
+}
+
+.body .interviews .grid .interview__vid {
+  object-fit: cover;
+}
+
+.body .interviews .grid .interview__overlay {
+  pointer-events: none;
+  padding: 1rem;
+  background: linear-gradient(180deg, rgba(246, 11, 15, 0.4) 0%, rgba(252, 196, 5, 0.4) 100%);
+}
+
+.body .interviews .grid .interview__overlay_title {
+  background-color: #FCC405;
+  padding: .25rem .5rem;
+  color: white;
+}
+
+.body .interviews .grid .interview__overlay_title--1 {
+  background-color: #FCC405;
+  color: black;
+}
+
+.body .interviews .grid .interview__overlay_title--2 {
+  background-color: #F60B0F;
+  color: white;
+}
+
+.body .interviews .grid .interview__overlay_title--3 {
+  background-color: #002FAF;
+  color: white;
+}
+
+.body .interviews .grid .interview__overlay_title--4 {
+  background-color: white;
+  color: black;
+}
+
+.body .interviews .grid .interview__overlay_description {
+  color: white;
+  text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
 }
 
 /*# sourceMappingURL=styles.css.map */

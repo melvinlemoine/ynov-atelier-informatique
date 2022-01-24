@@ -20,26 +20,145 @@
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <link rel="stylesheet" href="assets/css/styles.css" />
 
 </head>
 
 <body class="body">
 
-    <img class="konbini absolute animate__animated animate__bounce" src="assets/images/konbini.png" alt="logo konbini" />
+    <header class="header relative">
 
-    <div class="content flex-c">
-        <i class="content__quote fas fa-quote-left animate__animated animate__fadeInDown"></i>
-        <h1 class="content__title is-1-xs animate__animated animate__fadeIn">Les sneakers de l'année</h1>
-        <i class="content__quote fas fa-quote-right ml-auto animate__animated animate__fadeInUp"></i>
-    </div>
+        <img class="header__logo absolute animate__animated animate__bounce" src="assets/images/konbini.png"
+            alt="logo konbini" />
 
-    <div class="spock absolute flex-c h-end">
-        <img class="spock__img animate__animated animate__bounceInUp" src="assets/images/spock.png" alt="spock">
-        <p class="spock__name uppercase animate__animated animate__heartBeat ph-2-xs pv-1-xs bold is-1-xs absolute">spock</p>
-    </div>
+        <div class="header__content flex-c">
+            <!-- <i class="header__content_quote fas fa-quote-left animate__animated animate__fadeInDown"></i> -->
+            <h1 class="header__content_title is-1-xs animate__animated animate__fadeIn bold">POP my sneakers</h1>
+            <!-- <i class="header__content_quote fas fa-quote-right ml-auto animate__animated animate__fadeInUp"></i> -->
+        </div>
 
-    <img class="sneakers absolute animate__animated animate__fadeInRight" src="assets/images/sneaker.png" alt="sneakers" />
+        <div class="header__spock absolute flex-c h-end">
+            <img class="header__spock_img animate__animated animate__fadeInUp" src="assets/images/spock.png"
+                alt="spock">
+            <p
+                class="header__spock_name uppercase text-centered animate__animated animate__heartBeat ph-2-xs pv-1-xs bold is-3-xs absolute">
+                Spock en parle</p>
+        </div>
+
+        <img class="header__sneaker absolute" src="assets/images/sneaker.png" alt="sneakers" />
+    </header>
+
+    <section class="section presentation">
+        <div class="container">
+            <h1 class="section__title">C'est nouveau</h1>
+
+            <div class="presentation__content flex-r h-centered">
+
+                <div class="presentation__content_left w-half pr-3">
+
+                    <p class="presentation__content_left_description semibold is-1">
+                        <span class="blue">POP My
+                            Sneakers</span> c'est de la <span class="yellow">culture</span> autour de tes <span
+                            class="red">baskets.</span> Mais pas
+                        n'importes quelles baskets.
+                    </p>
+
+                </div>
+
+                <div class="presentation__content_right w-half">
+                    <i class="far fa-play-circle absolute play is-white pointer"
+                        onclick="$(this).parent().children('.presentation__content_right_vid')[0].play(); $(this).toggle(); $(this).parent().children('.presentation__content_right_vid').attr('controls', 'true'); $(this).parent().children('.pause').toggle();"></i>
+
+                    <i class="fas fa-pause absolute pause is-white pointer"
+                        onclick="$(this).parent().children('.presentation__content_right_vid')[0].pause(); $(this).parent().children('.presentation__content_right_vid').removeAttr('controls'); $(this).toggle(); $(this).parent().children('.play').toggle()"
+                        style="display: none"></i>
+                    <video class="presentation__content_right_vid fullsize">
+                        <source src="assets/vid/vid.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section interviews">
+
+        <div class="container">
+
+            <h2 class="section__title">Iels en parlent</h2>
+
+            <div class="grid">
+
+                <div class="interview fullsize bg-center bg-cover relative">
+                    <video muted id="vid1" poster="assets/images/1.png"
+                        class="interview__vid interview__vid--1 fullsize"
+                        onmouseenter="$(this).parent().children('.interview__vid--1')[0].play()"
+                        onmouseleave="$(this).parent().children('.interview__vid--1')[0].pause();">
+                        <source src="assets/vid/vid.mp4" type="video/mp4">
+                    </video>
+                    <div class="interview__overlay flex-c v-start h-end fullsize absolute top left">
+                        <h3 class="interview__overlay_title interview__overlay_title--1 is-4 bold uppercase">Julien</h3>
+                        <p class="interview__overlay_description mt-1">Les bottes sympa</p>
+                    </div>
+                </div>
+
+                <div class="interview fullsize bg-center bg-cover relative">
+                    <video muted id="vid1" poster="assets/images/2.png"
+                        class="interview__vid interview__vid--2 fullsize"
+                        onmouseenter="$(this).parent().children('.interview__vid--2')[0].play()"
+                        onmouseleave="$(this).parent().children('.interview__vid--2')[0].pause();">
+                        <source src="assets/vid/vid.mp4" type="video/mp4">
+                    </video>
+                    <div class="interview__overlay flex-c v-start h-end fullsize absolute top left">
+                        <h3 class="interview__overlay_title interview__overlay_title--2 is-4 bold uppercase">Gabriel</h3>
+                        <p class="interview__overlay_description mt-1">Tout est blanc</p>
+                    </div>
+                </div>
+
+                <div class="interview fullsize bg-center bg-cover relative">
+                    <video muted id="vid1" poster="assets/images/3.png"
+                        class="interview__vid interview__vid--3 fullsize"
+                        onmouseenter="$(this).parent().children('.interview__vid--3')[0].play()"
+                        onmouseleave="$(this).parent().children('.interview__vid--3')[0].pause();">
+                        <source src="assets/vid/vid.mp4" type="video/mp4">
+                    </video>
+                    <div class="interview__overlay flex-c v-start h-end fullsize absolute top left">
+                        <h3 class="interview__overlay_title interview__overlay_title--3 is-4 bold uppercase">Romane</h3>
+                        <p class="interview__overlay_description mt-1">Les miennes sont magiques</p>
+                    </div>
+                </div>
+
+                <div class="interview fullsize bg-center bg-cover relative">
+                    <video muted id="vid1" poster="assets/images/4.png"
+                        class="interview__vid interview__vid--4 fullsize"
+                        onmouseenter="$(this).parent().children('.interview__vid--4')[0].play()"
+                        onmouseleave="$(this).parent().children('.interview__vid--4')[0].pause();">
+                        <source src="assets/vid/vid.mp4" type="video/mp4">
+                    </video>
+                    <div class="interview__overlay flex-c v-start h-end fullsize absolute top left">
+                        <h3 class="interview__overlay_title interview__overlay_title--4 is-4 bold uppercase">Camille</h3>
+                        <p class="interview__overlay_description mt-1">Elles sont uniques au monde</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        function launchVideo(selector) {
+            console.log("selector : " + selector);
+            $('.interview__vid--' + selector).get(0).trigger('play');
+            // document.getElementsByClassName('.interview__vid--' + selector)[0].trigger('play');
+            $('.interview__vid--' + selector).get(0).play();
+            // document.getElementsByClassName('.interview__vid--' + selector)[0].play();
+        }
+    </script>
 
 </body>
 
